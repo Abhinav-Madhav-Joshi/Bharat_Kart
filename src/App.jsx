@@ -1,33 +1,45 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route, Link } from 'react-router-dom'
+import Logo from './assets/Logo.jpg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Home() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 className='Title'>Bharat Kart</h1>
+      <body>
+        
+      </body>
+    </>
+  )
+}
+
+function About() {
+  return <>
+    <p className="About">
+      The founder of the company is legendary Mr. Vijay Anand, who build this company with a thought to build a brand which people can rely on and which is build on trust and the moto of purity.
+    </p>
+  </>
+}
+
+
+function App() {
+  return (
+    <>
+      <nav className='Nav'>
+        <div>
+          <img src={Logo} className='logo'/>
+        </div>
+        <div>
+          <Link to="/" className='link'>Home</Link> 
+          <Link to="/about" className='link'>About</Link>
+        </div>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   )
 }
