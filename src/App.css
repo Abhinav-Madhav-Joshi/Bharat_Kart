@@ -41,16 +41,27 @@
 }
 
 .About{
-  padding: 0 20% 0 20%;
+  padding: 0.5% 15% 0 15%;
+
   font-weight: bold;
-  font-size: larger;
+  font-size: x-large;
+
+  /*
+  padding: 0 20% 0 20%;*/
 }
 
 .main{
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  margin: 5em 0 0 12em;
-  row-gap: 3.5em;
+  
+  justify-items: center; /* center each card */
+  column-gap: 7em; /* replaces row-gap, also adds col-gap */
+  row-gap: 4em;
+  margin: 5em auto 0 auto; /* centers the grid horizontally */
+  padding: 0 1em; /* small padding for mobile */
+  
+ /* margin: 5em 0 0 12em;
+  row-gap: 3.5em;*/
 }
 
 .Card{
@@ -58,14 +69,24 @@
   flex-direction: column;
   text-align: center;
   border: 0.25em groove #c90e49;
-  width: 17em;
-  background-color: rgb(115, 0, 255);
-  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8), -1.5em 1em 20px rgba(0, 0, 0, 0.9);
+
+  max-width: 18em;
+  max-height: 21em;
+  width: 100%;
+
+  background-color: rgb(115, 0, 255);  
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8), -1.5em 1em 20px rgba(0, 0, 0, 0.9);             
+
+  /*width: 17em;*/
 }
 
 .images{
-  height: 13em;
+  width: 100%;
+  height: 85%;
+
   border: 0.1em outset rgb(0, 0, 0);
+
+  /*height: 13em;*/
 }
 
 .product{
@@ -73,8 +94,13 @@
 }
 
 .Founder{
-  width: 17em;
-  margin: 3em 0 0 40%;
+  display: block;
+  max-width: 17em;
+  height: auto;
+  margin: 3em auto 0 auto;
+  
+  /* width: 17em;
+  margin: 3em 0 0 40%; */
 }
 
 footer{
@@ -82,6 +108,34 @@ footer{
   background-color: antiquewhite;
 }
 
+
+@media (max-width: 650px){
+  .main{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+  }
+}
+
+/* @media (max-width: 600px){
+  .main{
+    grid-template-columns: 1fr;
+  }
+} */
+
+/* @media (max-width: 768px){
+  h1.Title{
+    font-size: 2.5em;
+  }
+  .Nav{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .link{
+    margin: 10px;
+    font-size: 1.2em;
+  }
+} */
 
 
 
