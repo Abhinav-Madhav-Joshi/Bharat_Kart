@@ -114,6 +114,9 @@ footer{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2em;
   }
+  .Title{
+    font-size: 3em;
+  }
 }
 
 /* @media (max-width: 600px){

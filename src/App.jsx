@@ -5,7 +5,7 @@ import Honey from './assets/Honey.jpeg'
 import Chivda from './assets/Chivda.jpeg'
 import Sattu from './assets/Sattu.jpeg'
 import Pickle from './assets/Pickle.jpeg'
-import Ghugni from './assets/Ghugni.jpeg'
+import Chana from './assets/Chana.jpeg'
 import Vijay from './assets/Vijay.jpg'
 import './App.css'
 
@@ -31,8 +31,8 @@ function Home() {
           <span className='product'>Pure Sattu <br /> &#8377;300 (1kg)</span>
         </div>
         <div className='Card'>
-          <img src={Ghugni} className='images'/>
-          <span className='product'>Chana Ghugni <br /> &#8377;150 (200gm)</span>
+          <img src={Chana} className='images'/>
+          <span className='product'>Chana <br /> &#8377;150 (200gm)</span>
         </div>
         <div className='Card'>
           <img src={Pickle} className='images'/>
